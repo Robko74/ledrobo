@@ -1,12 +1,14 @@
 {
-    "name": "ledrobo",
+    "name": "policia",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
         "microphone": "*",
         "neopixel": "github:microsoft/pxt-neopixel#v0.7.5",
-        "pxt-kitronik-servo-lite": "github:kitronikltd/pxt-kitronik-servo-lite#v1.0.6"
+        "pxt-kitronik-servo-lite": "github:kitronikltd/pxt-kitronik-servo-lite#v1.0.6",
+        "radio-broadcast": "*",
+        "servo": "*"
     },
     "files": [
         "main.blocks",

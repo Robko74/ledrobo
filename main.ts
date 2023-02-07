@@ -1,0 +1,6 @@
+let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)
+strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+strip.show()
+basic.pause(5000)
+strip.clear()
+strip.show()

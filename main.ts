@@ -1,9 +1,21 @@
 input.onButtonPressed(Button.A, function () {
+    strip.showRainbow(1, 360)
+    strip.setBrightness(1)
+    strip.show()
     kitronik_servo_lite.setDistancePerSecond(5)
     kitronik_servo_lite.driveBackwards(10)
     kitronik_servo_lite.driveForwards(10)
+    strip.clear()
+    strip.show()
 })
-let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)
+input.onSound(DetectedSound.Loud, function () {
+    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    basic.pause(5000)
+    strip.clear()
+    strip.show()
+})
+let strip: neopixel.Strip = null
+strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)
 for (let index = 0; index < 4; index++) {
     strip.setBrightness(50)
     strip.showColor(neopixel.colors(NeoPixelColors.Red))

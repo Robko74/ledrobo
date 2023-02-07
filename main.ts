@@ -14,6 +14,7 @@ input.onSound(DetectedSound.Loud, function () {
     basic.pause(5000)
     strip.clear()
     strip.show()
+    basic.clearScreen()
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     strip.showRainbow(1, 360)
